@@ -1,0 +1,37 @@
+
+
+    <form action="/charge" method="post" id="payment-form">
+        <div class="group">
+            <label>
+                <span>Name</span>
+                <input name="cardholder_name" class="field" placeholder="Jane Doe" value="Govind Dandekar"/>
+            </label>
+            <label>
+                <span>Phone</span>
+                <input name="phone_number" class="field" value="(123) 456-7890" type="tel" />
+            </label>
+        </div>
+        <div class="group">
+            <label>
+                <span>Card</span>
+                <div id="card-element" class="field"></div>
+            </label>
+        </div>
+        <input type="hidden" name="computer_data" value={{computer._id}}>
+        <button class="elements-button bg-primary" type="submit">Pay ${{computer.price}}</button>
+        </div>
+    </form>
+  
+
+
+
+
+<script src="https://js.stripe.com/v3/"></script>
+{{#each scripts}}
+<script src="{{script}}"></script>
+{{/each}}
+
+
+
+
+
